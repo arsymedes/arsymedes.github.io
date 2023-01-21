@@ -1,16 +1,16 @@
 import React from "react";
 import NavButton from "./NavButton";
-import logoBlack from "../img/logo-black.png";
+import logoBlack from "../../img/logo-black.png";
 import { motion } from "framer-motion";
 
 function Header({ isNavOpen, setNavOpen }) {
   return (
-    <header className="fixed w-full pt-6 px-6 flex justify-between items-center">
+    <header className="fixed w-full pt-8 px-12 flex justify-between items-center">
       <motion.a
         whileHover={{ scale: 1.2 }}
         transition={{ duration: 0.2 }}
-        className="w-10 h-10"
-        href="arsymedes.github.io"
+        className="w-12 h-12"
+        href="https://arsymedes.github.io"
       >
         <img className="w-full h-full" src={logoBlack} alt="" />
       </motion.a>
