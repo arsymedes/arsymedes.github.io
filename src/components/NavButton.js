@@ -3,25 +3,24 @@ import { motion } from "framer-motion";
 
 function NavButton({ isOpen = false, lineProps = null, ...props }) {
   const width = 36;
-  const height = 12;
-  const unitHeight = 10;
+  const height = 36;
+  const unitHeight = 1;
   const unitWidth = (unitHeight * width) / height;
 
   const variant = isOpen ? "opened" : "closed";
   const top = {
     closed: { rotate: 0, translateY: 0 },
-    opened: { rotate: 45, translateY: 5 },
+    opened: { rotate: 45, translateY: 0.175 },
   };
   const bottom = {
-    closed: { rotate: 0, translateY: 0 },
-    opened: { rotate: -45, translateY: -5 },
+    closed: { rotate: 0, translateY: 0, originX: 0, scale: 0.6 },
+    hover: { scale: 1 },
+    opened: { rotate: -45, originX: 0.5, translateY: -0.157 },
   };
   lineProps = {
-    stroke: "black",
+    stroke: "currentColor",
     strokeWidth: "2",
     vectorEffect: "non-scaling-stroke",
-    initial: "closed",
-    animate: variant,
     transition: { ease: "easeOut", duration: 0.5 },
     ...lineProps,
   };
@@ -33,22 +32,23 @@ function NavButton({ isOpen = false, lineProps = null, ...props }) {
       preserveAspectRatio="none"
       width={width}
       height={height}
-      whileHover={{fill: "#ffffff"}}
+      animate={variant}
+      whileHover="hover"
       {...props}
     >
       <motion.line
         x1="0"
         x2={unitWidth}
-        y1="0"
-        y2="0"
+        y1={1 * unitHeight / 3}
+        y2={1 * unitHeight / 3}
         variants={top}
         {...lineProps}
       />
       <motion.line
         x1="0"
         x2={unitWidth}
-        y1={unitHeight}
-        y2={unitHeight}
+        y1={2 * unitHeight / 3}
+        y2={2 * unitHeight / 3}
         variants={bottom}
         {...lineProps}
       />
