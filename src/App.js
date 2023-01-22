@@ -2,9 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
+import { useCycle } from "framer-motion";
 
 function App() {
-  const [isNavOpen, setNavOpen] = useState(true);
+  const [isNavOpen, setNavOpen] = useCycle(false, true);
 
   return (
     <>

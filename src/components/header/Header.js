@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function Header({ isNavOpen, setNavOpen }) {
   return (
-    <header className="fixed w-full pt-8 px-12 flex justify-between items-center">
+    <header className="fixed w-full pt-8 px-8 flex justify-between items-center">
       <motion.a
         whileHover={{ scale: 1.2 }}
         transition={{ duration: 0.2 }}

@@ -19,14 +19,17 @@ function Nav({ isNavOpen }) {
     <AnimatePresence>
       {isNavOpen && (
         <motion.nav
-          className="h-screen fixed right-0 justify-center flex flex-col items-center gap-24 text-white bg-black"
-          initial={{width: 0}}
-          animate={{width: 320}}
-          exit={{width: 0}}
+          className="h-screen fixed w-[20rem] right-0 justify-center flex flex-col items-center gap-24 text-white bg-black"
+          initial={{x: 320}}
+          animate={{x: 0}}
+          exit={{x: 320, transition: {delay: 0.3}}}
+          transition={{duration: 1, ease: "easeOut", type: "spring"}}
         >
           <motion.ul
             className="flex flex-col gap-5 items-center font-semibold spacing text-3xl"
-            animate={isNavOpen ? "open" : "closed"}
+            initial="closed"
+            animate="open"
+            exit="closed"
             variants={variants}
           >
             <PageLink link="https://arsymedes.github.io">Home</PageLink>
@@ -34,7 +37,9 @@ function Nav({ isNavOpen }) {
             <PageLink link="https://arsymedes.github.io/projects">Projects</PageLink>
             <PageLink link="https://arsymedes.github.io/dreams">Dreams</PageLink>
           </motion.ul>
-          <motion.ul className="flex gap-8">
+          <motion.ul 
+            className="flex gap-8" 
+          >
             <WebLink link="https://github.com/arsymedes"><Github /></WebLink>
             <WebLink link="https://www.linkedin.com/in/ahmadarsy/"><Linkedin /></WebLink>
           </motion.ul>
