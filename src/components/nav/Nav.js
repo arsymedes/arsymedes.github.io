@@ -19,7 +19,7 @@ function Nav({ isNavOpen }) {
     <AnimatePresence>
       {isNavOpen && (
         <motion.nav
-          className="h-screen fixed w-[20rem] right-0 justify-center flex flex-col items-center gap-24 text-white bg-black"
+          className="h-screen fixed w-[20rem] right-0 justify-center flex flex-col items-center gap-24 text-white bg-black z-10"
           initial={{x: 320}}
           animate={{x: 0}}
           exit={{x: 320, transition: {delay: 0.3}}}

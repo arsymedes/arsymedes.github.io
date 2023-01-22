@@ -5,16 +5,16 @@ import { motion } from "framer-motion";
 
 function Header({ isNavOpen, setNavOpen }) {
   return (
-    <header className="fixed w-full pt-8 px-8 flex justify-between items-center">
+    <header className="fixed w-full pt-8 px-8 flex justify-between items-center z-10">
       <motion.a
         whileHover={{ scale: 1.2 }}
         transition={{ duration: 0.2 }}
-        className="w-12 h-12"
+        className="w-12 h-12 z-50"
         href="https://arsymedes.github.io"
       >
         <img className="w-full h-full" src={logoBlack} alt="" />
       </motion.a>
-      <button className="z-10" onClick={() => setNavOpen(!isNavOpen)}>
+      <button className="z-50" onClick={() => setNavOpen(!isNavOpen)}>
         <NavButton isOpen={isNavOpen} />
       </button>
     </header>
