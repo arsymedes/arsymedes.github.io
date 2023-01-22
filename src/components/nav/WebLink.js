@@ -8,6 +8,7 @@ function WebLink({children, link}) {
       href={link}
       target="_blank"
       whileHover={{filter: "invert(1)", scale: 1.2}}
+      whileTap={{filter: "invert(1)", scale: 0.95}}
       transition={{duration: 0.2, ease:"easeOut"}}
     >
       <li className="w-5 h-5">{children}</li>

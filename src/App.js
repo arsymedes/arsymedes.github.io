@@ -4,12 +4,12 @@ import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
 
 function App() {
-  const [isNavOpen, setNavOpen] = useState(false);
+  const [isNavOpen, setNavOpen] = useState(true);
 
   return (
     <>
-      {/* <Header isNavOpen={isNavOpen} setNavOpen={setNavOpen} /> */}
-      <Nav />
+      <Nav isNavOpen={isNavOpen} />
+      <Header isNavOpen={isNavOpen} setNavOpen={setNavOpen} />
     </>
   );
 }

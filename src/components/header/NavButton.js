@@ -9,13 +9,13 @@ function NavButton({ isOpen = false, lineProps = null, ...props }) {
 
   const variant = isOpen ? "opened" : "closed";
   const top = {
-    closed: { rotate: 0, translateY: 0 },
-    opened: { rotate: 45, translateY: 0.175 },
+    closed: { rotate: 0, translateY: 0, },
+    opened: { rotate: 45, translateY: 0.175, stroke: "white" },
   };
   const bottom = {
     closed: { rotate: 0, translateY: 0, originX: 0, scale: 0.6 },
     hover: { scale: 1 },
-    opened: { rotate: -45, originX: 0.5, translateY: -0.157 },
+    opened: { rotate: -45, originX: 0.5, translateY: -0.157, stroke: "white" },
   };
   lineProps = {
     stroke: "currentColor",
@@ -34,6 +34,7 @@ function NavButton({ isOpen = false, lineProps = null, ...props }) {
       height={height}
       animate={variant}
       whileHover="hover"
+      className="transition-all duration-200"
       {...props}
     >
       <motion.line
