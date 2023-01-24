@@ -7,7 +7,7 @@ function Header({ isNavOpen, setNavOpen }) {
   return (
     <header className="fixed w-full pt-8 px-8 flex justify-between items-center z-10">
       <motion.a
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.2, rotate: -10 }}
         transition={{ duration: 0.2 }}
         className="w-12 h-12 z-50"
         href="https://arsymedes.github.io"

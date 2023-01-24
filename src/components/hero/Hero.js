@@ -18,29 +18,17 @@ function Hero() {
   // }, []);
 
   return (
-    <section className="h-screen grid grid-cols-[4fr_3fr] place-items-center pt-10 relative z-0">
-      <div className="text-7xl font-semibold pl-16 relative">
+    <section className="h-screen grid place-items-center pt-10 relative z-0">
+      <div className="text-4xl font-semibold relative">
         <h1>Hello, I'm Arsy</h1>
         <h1>
           <span>A </span>
-          <ReactTextTransition inline className="text-[#24ece7]">
-            {texts[count % texts.length].split(" ")[0]}
-          </ReactTextTransition>
-          <span> </span>
-          <ReactTextTransition inline className="text-[#f7004d]">
-            {texts[count % texts.length].split(" ")[1]}{" "}
+          <ReactTextTransition>
+            <span className="text-[#24ece7]">{texts[count % texts.length].split(" ")[0]}</span>
+            <span> </span>
+            <span className="text-[#f7004d]">{texts[count % texts.length].split(" ")[1]}</span>
           </ReactTextTransition>
         </h1>
-
-      </div>
-      <div className="text-[550px] font-semibold relative w-[550px] aspect-[1/1] overflow-hidden select-none -z-10">
-        <span className="rotate-[10deg] absolute -top-[7.5rem] left-[4.5rem] text-[#24ece7]">
-          A
-        </span>
-        <span className="rotate-[10deg] absolute -top-32 left-24  text-[#f7004d] ">
-          A
-        </span>
-        <span className="rotate-[10deg] absolute -top-[7.5rem] left-20">A</span>
       </div>
     </section>
   );
