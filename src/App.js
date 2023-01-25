@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
 import Hero from "./components/hero/Hero";
+import About from "./components/about/About";
 import { useCycle } from "framer-motion";
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
     <>
       <Nav isNavOpen={isNavOpen} />
       <Header isNavOpen={isNavOpen} setNavOpen={setNavOpen} />
-      <main className="bg-[]">
+      <main className="">
         <Hero />
+        <About />
       </main>
     </>
   );

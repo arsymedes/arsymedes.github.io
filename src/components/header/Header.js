@@ -9,7 +9,7 @@ function Header({ isNavOpen, setNavOpen }) {
       <motion.a
         whileHover={{ scale: 1.2, rotate: -10 }}
         transition={{ duration: 0.2 }}
-        className="w-12 h-12 z-50"
+        className="w-8 h-8 sm:w-12 sm:h-12 z-50"
         href="https://arsymedes.github.io"
       >
         <img className="w-full h-full" src={logoBlack} alt="" />
