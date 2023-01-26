@@ -5,11 +5,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "chivo": ["Chivo", "sans-serif"],
+        chivo: ["Chivo", "sans-serif"],
       },
       backgroundImage: {
-        "logo": "url('./img/logo-black.png')"
-      }
+        logo: "url('./img/logo-black.png')",
+      },
+      colors: {
+        cyan: { 950: "#24ece7" },
+        red: { 950: "#f7004d" },
+        green: { 950: "#67BF63" },
+      },
     },
   },
   plugins: [],
