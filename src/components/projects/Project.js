@@ -11,7 +11,6 @@ function Project({ img, title, codeLink, appLink, children, techs, right=false }
   let ref = useRef(null)
   let { scrollYProgress } = useScroll({target: ref, offset:["start end", "end start"]})
   let y = useTransform(scrollYProgress, [0, 1], ["40%", "-60%"])
-  let yShadow = useTransform(scrollYProgress, [0, 1], ["16", "-16"])
 
   return (
     <article ref={ref} className="grid grid-cols-12 place-items-center">

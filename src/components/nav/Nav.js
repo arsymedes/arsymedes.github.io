@@ -32,10 +32,10 @@ function Nav({ isNavOpen }) {
             exit="closed"
             variants={variants}
           >
-            <PageLink link="https://arsymedes.github.io">Home</PageLink>
-            <PageLink link="https://arsymedes.github.io/story">Story</PageLink>
-            <PageLink link="https://arsymedes.github.io/projects">Projects</PageLink>
-            <PageLink link="https://arsymedes.github.io/dreams">Dreams</PageLink>
+            <PageLink link="#">Home</PageLink>
+            <PageLink link="#projects">Projects</PageLink>
+            <PageLink link="#about">About</PageLink>
+            <PageLink link="#contact">Contact</PageLink>
           </motion.ul>
           <motion.ul 
             className="flex gap-8" 

@@ -11,7 +11,7 @@ function Projects() {
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   return (
-    <section className="pb-8 flex flex-col gap-16">
+    <section id="projects" className="pb-8 flex flex-col gap-16">
       <h2 className="text-7xl sm:text-8xl font-semibold pb-12 text-gray-900 tiktok-text">
         Projects
       </h2>
