@@ -7,7 +7,7 @@
 body {
   font-family: "chivo", sans-serif;
   overflow-x: hidden;
-  scrollbar-color: black white;
+  scrollbar-color: black rgb(249, 250, 251);
 }
 
 body::-webkit-scrollbar {
@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: white;
+  background-color: rgb(249, 250, 251);
 }
 
 ::-moz-selection { /* Code for Firefox */

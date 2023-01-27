@@ -13,10 +13,10 @@ function App() {
     <>
       <Nav isNavOpen={isNavOpen} />
       <Header isNavOpen={isNavOpen} setNavOpen={setNavOpen} />
-      <main className="bg-gray-50 px-[10vw] md:px-12 lg:px-32">
+      <main className="bg-gray-50 px-[10vw] md:px-12 lg:px-32 flex flex-col gap-20">
         <Hero />
         <Projects />
-        {/* <About /> */}
+        <About />
       </main>
     </>
   );

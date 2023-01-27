@@ -3,7 +3,7 @@ import pp from "../img/pp.jpg"
 
 function About() {
   return(
-    <section className="px-12 md:px-32 pb-8">
+    <section className="pb-20">
       <h2 className="text-8xl font-semibold pb-12 text-gray-700 tiktok-text">About</h2>
       <div className="grid place-items-center md:block">
         <div className="w-60 md:min-w-[15rem] h-60 md:h-96 box-border shadow-[12px_12px_0px_0px_#24ece7,-12px_-12px_0px_0px_#f7004d] md:float-left mr-14 overflow-hidden">
