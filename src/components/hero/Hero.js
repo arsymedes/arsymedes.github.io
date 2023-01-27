@@ -18,19 +18,17 @@ function Hero() {
   // }, []);
 
   return (
-    <section className="h-screen grid items-center p-[10vw] sm:p-32 z-0 mb-20">
+    <section className="h-screen grid items-center z-0">
       <div className="text-7xl sm:text-8xl text-gray-700 font-medium z-10 flex flex-col gap-6">
         <h1>Hello<span className="text-red-600">.</span></h1>
         <h1>I'm Arsy</h1>
         <h1 className="relative font-semibold w-[105%]">
           <ReactTextTransition className="text-gray-900 tiktok-text">
-            <span>{texts[count % texts.length].split(" ")[0]}</span>
-            <span> </span>
-            <span>{texts[count % texts.length].split(" ")[1]}</span>
+            {texts[count % texts.length]}
           </ReactTextTransition>
         </h1>
       </div>
-      <div className="absolute w-60 h-60 bg-yellow-300 -right-32 sm:right-[300px]"></div>
+      <div className="absolute w-60 h-60 bg-yellow-300 shadow-[-12px_-12px] shadow-pink-500 -right-32 sm:right-[300px]"></div>
     </section>
   );
 }

@@ -13,7 +13,7 @@ function App() {
     <>
       <Nav isNavOpen={isNavOpen} />
       <Header isNavOpen={isNavOpen} setNavOpen={setNavOpen} />
-      <main className="bg-gray-50 relative -z-10">
+      <main className="bg-gray-50 px-[10vw] md:px-12 lg:px-32">
         <Hero />
         <Projects />
         {/* <About /> */}
