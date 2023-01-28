@@ -1,12 +1,37 @@
 import React, { useState, useRef } from "react";
+import Input from "./Input";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
   const form = useRef();
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [subject, setSubject] = useState("")
-  const [message, setMessage] = useState("")
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const inputs = [
+    {
+      name: "userName",
+      type: "text",
+      placeholder: "Full Name",
+      value: name,
+      setValue: setName,
+    },
+    {
+      name: "userEmail",
+      type: "email",
+      placeholder: "Email Address",
+      value: email,
+      setValue: setEmail,
+    },
+    {
+      name: "subject",
+      type: "text",
+      placeholder: "Subject",
+      value: subject,
+      setValue: setSubject,
+    },
+  ];
 
   function sendEmail(e) {
     e.preventDefault();
@@ -32,53 +57,31 @@ function Contact() {
       <h2 className="text-7xl sm:text-8xl font-semibold pb-12 text-gray-200 tiktok-text">
         Let's Talk
       </h2>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(min(400px,100%),1fr))]">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(min(400px,100%),1fr))] gap-10">
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col gap-5 md:pr-40 "
+          className="flex flex-col gap-5"
         >
           <h3 className="text-3xl font-semibold mb-4">Send Me a Message 😉</h3>
-          <input
-            className="h-8 px-4 py-5 text-lg outline-none bg-zinc-700 focus:bg-zinc-800 placeholder:text-zinc-500"
-            type="text"
-            name="userName"
-            placeholder="Full Name"
-            value={name}
-            onChange={e => {setName(e.target.value)}}
-            required
-          />
-          <input
-            className="h-8 px-4 py-5 text-lg outline-none bg-zinc-700 focus:bg-zinc-800 placeholder:text-zinc-500"
-            type="email"
-            name="userEmail"
-            placeholder="Email Address"
-            value={email}
-            onChange={e => {setEmail(e.target.value)}}
-            required
-          />
-          <input
-            className="h-8 px-4 py-5 text-lg outline-none bg-zinc-700 focus:bg-zinc-800 placeholder:text-zinc-500"
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            value={subject}
-            onChange={e => {setSubject(e.target.value)}}
-            required
-          />
+          {inputs.map(input => <Input key={input.name} input={input} />)}
           <textarea
-            className="h-40 px-4 py-3 text-lg outline-none bg-zinc-700 focus:bg-zinc-800 placeholder:text-zinc-500"
+            className="h-40 px-4 py-3 text-lg outline-none bg-zinc-700 focus:bg-zinc-800 placeholder:text-zinc-500 shadow-[-6px_6px] shadow-custom-200"
             name="message"
             id=""
             cols="30"
             rows="10"
             placeholder="Tell me anything!"
             value={message}
-            onChange={e => {setMessage(e.target.value)}}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
             required
           ></textarea>
         </form>
-        <div></div>
+        <div>
+        <h3 className="text-3xl font-semibold mb-4">Or</h3>
+        </div>
       </div>
     </footer>
   );
