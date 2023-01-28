@@ -1,20 +1,39 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import Github from "./Github";
 import Link from "./Link";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-function Project({ img, title, codeLink, appLink, children, techs, right=false }) {
-  techs = techs || []
-  const posText = right ? "md:col-start-5 col-end-[-1]" : "md:col-end-9"
-  const posImg = right ? "md:col-end-8" : "md:col-start-6"
+function Project({
+  img,
+  title,
+  codeLink,
+  appLink,
+  children,
+  techs,
+  right = false,
+}) {
+  techs = techs || [];
+  const posText = right ? "md:col-start-5 col-end-[-1]" : "md:col-end-9";
+  const posImg = right ? "md:col-end-8" : "md:col-start-6";
 
-  let ref = useRef(null)
-  let { scrollYProgress } = useScroll({target: ref, offset:["start end", "end start"]})
-  let y = useTransform(scrollYProgress, [0, 1], ["40%", "-60%"])
+  let ref = useRef(null);
+  let { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  let y = useTransform(scrollYProgress, [0, 1], ["20%", "-40%"]);
 
   return (
-    <article ref={ref} className="grid grid-cols-12 place-items-center">
-      <div className={`col-start-1 ${posText} col-end-[-1] row-start-1 row-end-[-1] z-10 flex flex-col items-start gap-4 px-8 py-8 md:p-0`}>
+    <motion.article
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1, transition: { duration: 0.75 } }}
+      viewport={{ once: true, amount: 0.2 }}
+      ref={ref}
+      className="grid grid-cols-12 place-items-center"
+    >
+      <div
+        className={`col-start-1 ${posText} col-end-[-1] row-start-1 row-end-[-1] z-10 flex flex-col items-start gap-4 px-8 py-8 md:p-0`}
+      >
         <h3 className="text-3xl font-semibold bg-yellow-300 px-4 py-2">
           {title}
         </h3>
@@ -33,22 +52,26 @@ function Project({ img, title, codeLink, appLink, children, techs, right=false }
             href={appLink}
             target="_blank"
             rel="noreferrer"
-            className="bg-custom-200 hover:bg-red-700 font-semibold flex items-center gap-2 text-white px-3 py-2 hover:shadow-[8px_8px] hover:shadow-custom-100 hover:-translate-x-2 hover:-translate-y-2 transition-all duration-100"
+            className="bg-custom-100 group"
           >
-            Live Preview
-            <div className="w-8 h-8">
-              <Link />
+            <div className="bg-custom-200 group-hover:bg-red-700 font-semibold flex items-center gap-2 text-white px-3 py-2 group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100">
+              Live Preview
+              <div className="w-8 h-8 ">
+                <Link />
+              </div>
             </div>
           </a>
           <a
             href={codeLink}
             target="_blank"
             rel="noreferrer"
-            className="bg-custom-200 hover:bg-red-700 font-semibold flex items-center gap-2 text-white px-3 py-2 hover:shadow-[8px_8px] hover:shadow-custom-100 hover:-translate-x-2 hover:-translate-y-2 transition-all duration-100"
+            className="bg-custom-100 group"
           >
-            View Code
-            <div className="w-8 h-8">
-              <Github />
+            <div className="bg-custom-200 group-hover:bg-red-700 font-semibold flex items-center gap-2 text-white px-3 py-2 group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100">
+              View Code
+              <div className="w-8 h-8">
+                <Github />
+              </div>
             </div>
           </a>
         </div>
@@ -64,7 +87,7 @@ function Project({ img, title, codeLink, appLink, children, techs, right=false }
           alt={`${title} Screenshot`}
         />
       </motion.a>
-    </article>
+    </motion.article>
   );
 }
 
