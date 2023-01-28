@@ -55,7 +55,7 @@ function Project({ img, title, codeLink, appLink, children, techs, right=false }
       </div>
       <motion.a
         href={appLink}
-        className={`col-start-1 ${posImg} col-end-[-1] h-full md:h-auto row-start-1 row-end-[-1] shadow-[16px_16px_0px_0px] shadow-yellow-300 bg-black outline outline-2`}
+        className={`col-start-1 ${posImg} col-end-[-1] h-full md:h-auto row-start-1 row-end-[-1] shadow-[16px_16px_0px_0px] shadow-yellow-300 bg-blue-900 outline outline-2`}
         style={{ y }}
       >
         <img

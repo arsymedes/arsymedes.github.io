@@ -8,12 +8,12 @@ function About() {
     target: ref,
     offset: ["start end", "end start"],
   });
-  let yBlue = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
-  let yRed = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+  let yBlue = useTransform(scrollYProgress, [0, 1], ["15%", "-15%"]);
+  let yRed = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
 
   return (
     <section id="about" className="pb-20">
-      <h2 className="text-8xl font-semibold pb-12 text-gray-700 tiktok-text">
+      <h2 className="text-7xl md:text-8xl font-semibold pb-12 text-gray-700 tiktok-text">
         About
       </h2>
       <div className="grid place-items-center md:block">

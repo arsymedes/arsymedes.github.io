@@ -4,6 +4,7 @@ import Nav from "./components/nav/Nav";
 import Hero from "./components/hero/Hero";
 import Projects from "./components/projects/Projects";
 import About from "./components/About";
+import Contact from "./components/contact/Contact";
 import { useCycle } from "framer-motion";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Projects />
         <About />
       </main>
+      <Contact />
     </>
   );
 }
