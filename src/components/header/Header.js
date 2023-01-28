@@ -14,7 +14,7 @@ function Header({ isNavOpen, setNavOpen }) {
       >
         <img className="w-full h-full" src={logoBlack} alt="" />
       </motion.a>
-      <button className="z-50" onClick={() => setNavOpen(!isNavOpen)}>
+      <button className="z-50 text-custom-200" onClick={() => setNavOpen(!isNavOpen)}>
         <NavButton isOpen={isNavOpen} />
       </button>
     </header>
