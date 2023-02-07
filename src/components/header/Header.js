@@ -10,11 +10,12 @@ function Header({ isNavOpen, setNavOpen }) {
         whileHover={{ scale: 1.2, rotate: -10 }}
         transition={{ duration: 0.2 }}
         className="w-8 h-8 sm:w-12 sm:h-12 z-50"
+        aria-label="Home"
         href="https://arsymedes.github.io"
       >
         <img className="w-full h-full" src={logoBlack} alt="" />
       </motion.a>
-      <button className="z-50 text-custom-200" onClick={() => setNavOpen(!isNavOpen)}>
+      <button className="z-50 text-custom-200" aria-label="Nav" onClick={() => setNavOpen(!isNavOpen)}>
         <NavButton isOpen={isNavOpen} />
       </button>
     </header>

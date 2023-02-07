@@ -1,10 +1,10 @@
 import React from "react";
 import Project from "./Project";
-import cv from "../../img/cv.png";
-import shop from "../../img/shop.png";
-import waldo from "../../img/waldo.png";
-import weather from "../../img/weather.png";
-import { motion, useScroll, useTransform } from "framer-motion";
+import cv from "../../img/cv.webp";
+import shop from "../../img/shop.webp";
+import waldo from "../../img/waldo.webp";
+import weather from "../../img/weather.webp";
+import { motion } from "framer-motion";
 
 function Projects() {
   return (

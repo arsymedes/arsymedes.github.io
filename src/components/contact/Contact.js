@@ -72,7 +72,7 @@ function Contact() {
       >
         Let's Talk
       </motion.h2>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(min(350px,100%),1fr))] gap-12">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(min(375px,100%),1fr))] gap-12">
         <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
           <motion.h3
             initial={{ y: 50, opacity: 0 }}
@@ -115,44 +115,44 @@ function Contact() {
             ... Or Contact Me Here!
           </motion.h3>
           <ul className="text-4xl font-semibold grid grid-cols-[repeat(auto-fill,minmax(min(250px,100%),1fr))] gap-10 text-center">
-            <a
-              className="group bg-yellow-300"
-              href="mailto:ahmad.arsy.work@gmail.com?subject=Email Through Arsy's Website"
-            >
-              <li className="bg-[#64170c] px-8 py-2 group-hover:bg-[#9d2310] group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100">
+            <li className="group bg-yellow-300">
+              <a
+                href="mailto:ahmad.arsy.work@gmail.com?subject=Email Through Arsy's Website"
+                className="bg-[#64170c] block px-8 py-2 group-hover:bg-[#9d2310] group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100"
+              >
                 Email
-              </li>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ahmadarsy/"
-              target="_blank"
-              rel="noreferrer"
-              className="group bg-yellow-300"
-            >
-              <li className="bg-[#113e57] px-8 py-2 group-hover:bg-[#0077b7] group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100">
+              </a>
+            </li>
+            <li className="group bg-yellow-300">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/ahmadarsy/"
+                className="bg-[#113e57] block px-8 py-2 group-hover:bg-[#0077b7] group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100"
+              >
                 Linkedin
-              </li>
-            </a>
-            <a
-              href="https://github.com/arsymedes"
-              target="_blank"
-              rel="noreferrer"
-              className="group bg-yellow-300"
-            >
-              <li className="bg-[#171515] px-8 py-2 group-hover:bg-[#272121] group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100">
+              </a>
+            </li>
+            <li className="group bg-yellow-300">
+              <a
+                href="https://github.com/arsymedes"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#171515] block px-8 py-2 group-hover:bg-[#272121] group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100"
+              >
                 Github
-              </li>
-            </a>
-            <a
-              href={resume}
-              target="_blank"
-              rel="noreferrer"
-              className="group bg-yellow-300"
-            >
-              <li className="bg-[#3e703b] px-8 py-2 group-hover:bg-[#67bf63] group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100">
+              </a>
+            </li>
+            <li className="group bg-yellow-300">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={resume}
+                className="bg-[#3e703b] block px-8 py-2 group-hover:bg-[#67bf63] group-hover:-translate-x-2 group-hover:-translate-y-2 transition-all duration-100"
+              >
                 Resume
-              </li>
-            </a>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

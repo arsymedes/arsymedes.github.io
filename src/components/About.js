@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import pp from "../img/pp.jpg";
+import pp from "../img/pp.webp";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 function About() {

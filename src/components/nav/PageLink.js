@@ -8,14 +8,14 @@ function PageLink({ children, link }) {
   };
 
   return (
-    <motion.a
-      href={link}
+    <motion.li
       className="px-3 py-1"
       variants={variants}
       whileHover={{ scale: 1.2, transition: { duration: 0.3 } }}
       transition={{ duration: 0.5 }}
     >
-      <li
+      <a
+        href={link}
         className="bg-gradient-to-l px-3 py-1 from-black to-white bg-[length:201%_100%] bg-right ease-in-out hover:bg-left hover:text-black transition-all duration-[500ms] "
         style={{
           "--tw-gradient-stops":
@@ -23,8 +23,8 @@ function PageLink({ children, link }) {
         }}
       >
         {children}
-      </li>
-    </motion.a>
+      </a>
+    </motion.li>
   );
 }
 
