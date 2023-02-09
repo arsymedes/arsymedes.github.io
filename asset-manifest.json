@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.f48a79d3.css",
-    "main.js": "/static/js/main.143449cb.js",
-    "static/media/pp.jpg": "/static/media/pp.4c6b638a08221a7c4ee9.jpg",
-    "static/media/weather.png": "/static/media/weather.ab6c59dce2f9ddbf5e93.png",
-    "static/media/shop.png": "/static/media/shop.58c95306bf5653bdf3ea.png",
-    "static/media/waldo.png": "/static/media/waldo.f66e6515516ea77495b7.png",
+    "main.css": "/static/css/main.1809aa91.css",
+    "main.js": "/static/js/main.2b04844c.js",
+    "static/media/pp.webp": "/static/media/pp.331233f40c47dc017fee.webp",
     "static/media/CV_Ahmad Arsy.pdf": "/static/media/CV_Ahmad Arsy.f6f4688d1ccc806dcb71.pdf",
-    "static/media/cv.png": "/static/media/cv.6e5b7a6f67d504512d44.png",
+    "static/media/waldo.webp": "/static/media/waldo.2809b944bdb9faf05ba9.webp",
+    "static/media/weather.webp": "/static/media/weather.755923dd09b1dff13c3d.webp",
+    "static/media/cv.webp": "/static/media/cv.e8488841cf073dc4bb9a.webp",
+    "static/media/shop.webp": "/static/media/shop.bf8b498e5198bb44bd87.webp",
     "index.html": "/index.html",
-    "main.f48a79d3.css.map": "/static/css/main.f48a79d3.css.map",
-    "main.143449cb.js.map": "/static/js/main.143449cb.js.map"
+    "main.1809aa91.css.map": "/static/css/main.1809aa91.css.map",
+    "main.2b04844c.js.map": "/static/js/main.2b04844c.js.map"
   },
   "entrypoints": [
-    "static/css/main.f48a79d3.css",
-    "static/js/main.143449cb.js"
+    "static/css/main.1809aa91.css",
+    "static/js/main.2b04844c.js"
   ]
 }
