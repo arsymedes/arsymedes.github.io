@@ -78,6 +78,7 @@ function Project({
       </div>
       <motion.a
         href={appLink}
+        target="_blank"
         className={`col-start-1 ${posImg} col-end-[-1] h-full md:h-auto row-start-1 row-end-[-1] shadow-[16px_16px_0px_0px] shadow-yellow-300 bg-blue-900 outline outline-2`}
         style={{ y }}
       >

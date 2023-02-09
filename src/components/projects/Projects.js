@@ -54,8 +54,8 @@ function Projects() {
         title="Among Us"
         img={waldo}
         techs={["React JS", "Tailwind CSS", "Firebase"]}
-        codeLink="https://github.com/arsymedes/shopping-cart"
-        appLink="https://arsymedes.github.io/shopping-cart"
+        codeLink="https://arsymedes.github.io/where-s-waldo/"
+        appLink="https://arsymedes.github.io/where-s-waldo/"
         right
       >
         A photo tagging game where user needs to find 3 famous characters in a
